@@ -34,6 +34,7 @@ def warm_up_servers():
     #     reqs = (grequests.get(url, stream=False, hooks={'response': response_handler}, verify=False) for _ in
     #             range(1490))
     #     grequests.map(reqs, size=100)
+
     with open("pf.txt", "r") as f:
         content = f.read()
         list_resp = [int(s) for s in content.split(' ')]
