@@ -1,0 +1,1 @@
+heroku logs -a gabrielvoicu200-worker-asia-1 -n 1500 | awk '/service/ {print $11}' | cut -d '=' -f 2 | sed 's/..$//' | head -c -1 | tr '\n' ' ' > pf.txt
